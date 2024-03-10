@@ -1,16 +1,19 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System;
 
- static void task1()
+class Program
 {
-    Console.WriteLine("Task1 !");
-    Console.Write("s= ");
-    string? str = Console.ReadLine();
-    float s = 0; 
-    if (str != null) s = float.Parse(str);
-    double p = 4 * Math.Sqrt(s);
-    Console.WriteLine("p=" + p);
+    static void Main(string[] args)
+    {
+        Console.OutputEncoding = System.Text.Encoding.UTF8;
+        Console.WriteLine("Введіть периметр квадрата:");
+        double perimeter = Convert.ToDouble(Console.ReadLine());
 
+        // Отримання сторони квадрата за формулою периметра
+        double side = perimeter / 4;
+
+        // Обчислення площі квадрата
+        double area = side * side;
+
+        Console.WriteLine($"Площа квадрата з периметром {perimeter} дорівнює: {area}");
+    }
 }
-Console.WriteLine("Lab 1 !");
-task1();
-// continue ...
